@@ -36,23 +36,64 @@
         <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512x512.png">
     <script type="application/ld+json">{
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Ante Milic",
-      "jobTitle": "Freiberuflicher Konstruktionsingenieur",
-      "url": "https://milic-engineering.de",
-      "email": "ante@milic-engineering.de",
-      "telephone": "+4917660974772",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Mainzer Straße 14",
-        "addressLocality": "Stuttgart",
-        "postalCode": "70499",
-        "addressCountry": "DE"
-      },
-      "knowsAbout": ["PTC Creo Parametric", "SAP PLM", "Maschinenbau", "Konstruktion", "Automotive", "Halbleiterindustrie"],
-      "sameAs": [
-        "https://www.linkedin.com/in/ante-milic-creo-konstruktion/",
-        "https://www.xing.com/profile/Ante_Milic091835/"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://milic-engineering.de/#person",
+          "name": "Ante Milic",
+          "jobTitle": "Freiberuflicher Konstruktionsingenieur",
+          "url": "https://milic-engineering.de/",
+          "image": "https://milic-engineering.de/images/bewerungsfoto_ante_milic_2.png",
+          "email": "ante@milic-engineering.de",
+          "telephone": "+4917660974772",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Mainzer Straße 14",
+            "addressLocality": "Stuttgart",
+            "postalCode": "70499",
+            "addressRegion": "Baden-Württemberg",
+            "addressCountry": "DE"
+          },
+          "knowsAbout": ["PTC Creo Parametric", "SAP PLM", "Siemens NX", "CATIA V5", "ANSYS", "Maschinenbau", "Konstruktion", "Automotive", "Halbleiterindustrie", "Rohrbaugruppen", "Medientableaus"],
+          "sameAs": [
+            "https://www.linkedin.com/in/ante-milic-creo-konstruktion/",
+            "https://www.xing.com/profile/Ante_Milic091835/"
+          ],
+          "worksFor": { "@id": "https://milic-engineering.de/#business" }
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://milic-engineering.de/#business",
+          "name": "Milic Engineering",
+          "url": "https://milic-engineering.de/",
+          "image": "https://milic-engineering.de/images/bewerungsfoto_ante_milic_2.png",
+          "email": "ante@milic-engineering.de",
+          "telephone": "+4917660974772",
+          "priceRange": "$$",
+          "founder": { "@id": "https://milic-engineering.de/#person" },
+          "areaServed": [
+            { "@type": "City", "name": "Stuttgart" },
+            { "@type": "Country", "name": "Deutschland" }
+          ],
+          "serviceType": [
+            "Konstruktion / CAD (PTC Creo Parametric)",
+            "Entwicklung komplexer Baugruppen",
+            "SAP/PLM-Stammdaten- und Stücklistenpflege",
+            "Prototypenentwicklung"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Mainzer Straße 14",
+            "addressLocality": "Stuttgart",
+            "postalCode": "70499",
+            "addressRegion": "Baden-Württemberg",
+            "addressCountry": "DE"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/in/ante-milic-creo-konstruktion/",
+            "https://www.xing.com/profile/Ante_Milic091835/"
+          ]
+        }
       ]
     }</script>
 </head>
@@ -168,7 +209,7 @@
                             class="home-header-headshot" alt="Ante Milic - Freiberuflicher Konstruktionsingenieur Stuttgart" />
                         <h1 class="display-text home-header"><strong class="bold-text">Konstruktionsingenieur
                                 <br /></strong></h1>
-                        <h1 class="display-text home-header"><strong class="h2">Region Stuttgart</strong></h1>
+                        <h2 class="display-text home-header"><strong class="h2">Region Stuttgart</strong></h2>
                         <p class="home-hero-p">Freiberuflicher Konstruktionsingenieur für anspruchsvollen Maschinenbau,
                             Automotive und Wehrtechnik. Experte für komplexe Baugruppen in <strong>PTC Creo
                             Parametric</strong> und nahtlose <strong>SAP/PLM-Integration</strong>.<br /><br />Sofort
@@ -214,9 +255,9 @@
             <section class="section-cta vertical-spacing">
                 <div class="padding-global">
                     <div class="container cta">
-                        <h1 class="display-text cta">Ich freue mich auf Ihre Projektanfrage!</h1><a
-                            href="mailto:ante@milic-engineering.de?subject=Projektanfrage%20Engineering"
-                            class="secondary-button cta w-button">ante@milic-engineering.de</a>
+                        <h2 class="display-text cta">Ich freue mich auf Ihre Projektanfrage!</h2><a
+                            href="/contact"
+                            class="secondary-button cta w-button">Projekt anfragen</a>
                     </div>
                 </div>
             </section>
