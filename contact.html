@@ -1,5 +1,5 @@
 <!DOCTYPE html><!-- Handled by Exflow.site -->
-<html data-wf-page="6a2d5fc347e06bbcb364a09a" data-wf-site="6a2d5fc047e06bbcb364a052" data-wf-status="1" lang="en">
+<html data-wf-page="6a2d5fc347e06bbcb364a09a" data-wf-site="6a2d5fc047e06bbcb364a052" data-wf-status="1" lang="de">
 
 <head>
     <meta charset="utf-8" />
@@ -17,6 +17,9 @@
         content="Suchen Sie Unterstützung für Ihr Konstruktionsprojekt? Kontaktieren Sie mich direkt für Anfragen in PTC Creo, SAP/PLM und mechanische Entwicklung – vor Ort oder remote."
         name="twitter:description" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://milic-engineering.de/contact" />
+    <meta property="og:image" content="https://milic-engineering.de/images/og-image.png" />
+    <meta name="twitter:image" content="https://milic-engineering.de/images/og-image.png" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
@@ -124,6 +127,35 @@
         -webkit-text-fill-color: #ffffff !important;
         transition: background-color 5000s ease-in-out 0s;
     }
+    /* Visuell verstecktes Label (bleibt für Screenreader lesbar) */
+    .sr-only {
+        position: absolute;
+        width: 1px; height: 1px;
+        padding: 0; margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        white-space: nowrap;
+        border: 0;
+    }
+    /* Direkter Kontakt (Telefon / E-Mail) */
+    .direct-contact-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        margin: 18px 0 8px;
+    }
+    .direct-contact-wrap a {
+        color: rgba(255,255,255,0.75);
+        text-decoration: none;
+        font-size: 15px;
+        letter-spacing: 0.01em;
+        transition: color 0.2s ease;
+    }
+    .direct-contact-wrap a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+    }
 </style>
 <body>
     <div class="page-wrapper">
@@ -149,15 +181,22 @@
                     <div class="container center">
                         <h1 class="heading-5">Kontakt</h1>
                         <p>Lassen Sie uns über Ihr nächstes Projekt sprechen.</p>
+                        <div class="direct-contact-wrap">
+                            <a href="tel:+4917660974772" aria-label="Anrufen unter +49 176 60974772">&#9742;&nbsp; +49 176 60974772</a>
+                            <a href="mailto:ante@milic-engineering.de?subject=Projektanfrage%20Engineering" aria-label="E-Mail an ante@milic-engineering.de">&#9993;&nbsp; ante@milic-engineering.de</a>
+                        </div>
                         <div class="w-form">
                             
                             <!-- NACHRICHTEN-SENDEN FORMULAR -->
                             <form id="ajax-form" action="https://formspree.io/f/xlgkkpaw" method="POST" class="contact-form">
                                 
-                                <input class="text-field w-input" maxlength="256" name="Name" placeholder="Ihr Name" type="text" id="name" required="" />
+                                <label for="name" class="sr-only">Ihr Name</label>
+                                <input class="text-field w-input" maxlength="256" name="Name" placeholder="Ihr Name" type="text" id="name" autocomplete="name" required="" />
                                     
-                                <input class="text-field w-input" maxlength="256" name="Email" placeholder="Ihre E-Mail-Adresse" type="email" id="email" required="" />
+                                <label for="email" class="sr-only">Ihre E-Mail-Adresse</label>
+                                <input class="text-field w-input" maxlength="256" name="Email" placeholder="Ihre E-Mail-Adresse" type="email" id="email" autocomplete="email" required="" />
                                     
+                                <label for="field" class="sr-only">Gewünschte Unterstützung</label>
                                 <select id="field" name="Anfrage_Typ" class="select-field w-select" required="">
                                     <option value="">Gewünschte Unterstützung</option>
                                     <option value="PTC Creo Konstruktion">PTC Creo Konstruktion</option>
@@ -165,7 +204,8 @@
                                     <option value="Sonstige Projektanfrage">Sonstige Projektanfrage</option>
                                 </select>
                                 
-                                <textarea placeholder="Wie kann ich Sie unterstützen?" maxlength="5000" id="Messege" name="Nachricht" class="text-area w-input" required=""></textarea>
+                                <label for="message" class="sr-only">Ihre Nachricht</label>
+                                <textarea placeholder="Wie kann ich Sie unterstützen?" maxlength="5000" id="message" name="Nachricht" class="text-area w-input" required=""></textarea>
                                     
                                 <input type="submit" id="submit-btn" class="primary-button w-button" value="Nachricht senden" />
                             </form>
@@ -187,7 +227,7 @@
             <section class="section-footer">
                 <div class="container">
                     <div class="footer-content-wrapper">
-                        <div class="footer-copyright-text">© 2026 Milic Engineering. Alle Rechte vorbehalten.<br><a href="/legal-notice.html" class="link">Impressum</a> &nbsp;|&nbsp; <a href="/privacy-policy.html" class="link-2">Datenschutz</a></div>
+                        <div class="footer-copyright-text">© 2026 Milic Engineering. Alle Rechte vorbehalten.<br><a href="/legal-notice" class="link">Impressum</a> &nbsp;|&nbsp; <a href="/privacy-policy" class="link-2">Datenschutz</a></div>
                     </div>
                 </div>
             </section>
