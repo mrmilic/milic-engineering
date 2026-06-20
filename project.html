@@ -18,45 +18,11 @@
         name="twitter:description" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://milic-engineering.de/project" />
-    <meta property="og:image" content="https://milic-engineering.de/images/og-image.png" />
-    <meta name="twitter:image" content="https://milic-engineering.de/images/og-image.png" />
+    <meta property="og:image" content="https://www.milic-engineering.de/images/favicon-512x512.png">
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
     <link rel="canonical" href="https://milic-engineering.de/project" />
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Projekte & Expertise | Milic Engineering",
-      "url": "https://milic-engineering.de/project",
-      "description": "Auszug aus der Projekthistorie von Ante Milic: komplexe Baugruppen, CAD-Methodik und PLM-Integration in Maschinenbau, Halbleiter- und Automotive-Branche.",
-      "about": { "@id": "https://milic-engineering.de/#person" },
-      "mainEntity": {
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Komplexe Rohrbaugruppen & Gerätetechnik",
-            "description": "Konstruktion und 3D-CAD-Modellierung von Medientableaus, Rohrbaugruppen und Gerätebaugruppen in PTC Creo Parametric und SAP (Anlagenbau / Halbleiter)."
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Bauteiloptimierung & Serienvorbereitung",
-            "description": "Auslegung, Detaillierung und Optimierung von Komponenten im allgemeinen Maschinenbau inkl. PLM-/SAP-Datenpflege und fertigungsgerechter Dokumentation."
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "Prototypenentwicklung & Thermische Validierung",
-            "description": "Entwurf, 3D-Konstruktion und Aufbau von Batteriemodulprototypen für Laborversuche inkl. thermischer Untersuchungen in Siemens NX, CATIA V5 und ANSYS (E-Mobility / Automotive)."
-          }
-        ]
-      }
-    }
-    </script>
     <link href="css/milic-engineering.webflow.shared.e1d3ffbaa.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" />
@@ -146,6 +112,30 @@
         font-size: 15px;
         margin: 0;
     }
+    /* ZWEISPALTIGES KARTEN-LAYOUT MIT TECHNISCHER GRAFIK */
+    .project-card-inner {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+    .project-card-text {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+    .project-card-graphic {
+        flex: 0 0 200px;
+        opacity: 0.85;
+    }
+    .project-card-graphic svg {
+        display: block;
+        width: 200px;
+        height: auto;
+    }
+    @media screen and (max-width: 767px) {
+        .project-card-graphic {
+            display: none;
+        }
+    }
     .bold-text-3 {
     line-height: 1.3;
 }
@@ -153,24 +143,24 @@
 </style>
 <body class="body-2">
     <div class="page-wrapper">
-        <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease"
-            data-easing2="ease" role="banner" class="navbar w-nav">
-            <div class="padding-global">
-                <div class="container nav"><a href="/" class="brand w-nav-brand">
-                        <div class="nav-text">Ante Milic</div>
-                    </a>
-                    <nav role="navigation" class="nav-menu w-nav-menu"><a href="/project" aria-current="page"
-                            class="nav-link w-nav-link w--current">Projekte</a><a href="/about"
-                            class="nav-link w-nav-link">Über</a><a href="/contact"
-                            class="nav-link w-nav-link">Kontakt</a></nav>
-                    <div class="menu-button w-nav-button" aria-label="Menü öffnen" role="button">
-                        <div class="w-icon-nav-menu"></div>
+        <div class="main-wrapper">
+            <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease"
+                data-easing2="ease" role="banner" class="navbar w-nav">
+                <div class="padding-global">
+                    <div class="container nav"><a href="/" class="brand w-nav-brand">
+                            <div class="nav-text">Ante Milic</div>
+                        </a>
+                        <nav role="navigation" class="nav-menu w-nav-menu"><a href="/project" aria-current="page"
+                                class="nav-link w-nav-link w--current">Projekte</a><a href="/about"
+                                class="nav-link w-nav-link">Über</a><a href="/contact"
+                                class="nav-link w-nav-link">Kontakt</a></nav>
+                        <div class="menu-button w-nav-button" aria-label="Menü öffnen" role="button">
+                            <div class="w-icon-nav-menu"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="main-wrapper">
-
+            
             <section class="section-project-header vertical-spacing">
                 <div class="padding-global">
                     <div class="w-layout-blockcontainer container-2 w-container" style="text-align: center; margin-bottom: 20px;">
@@ -181,46 +171,108 @@
                         
                         <!-- PROJEKT 1 -->
                         <div class="custom-project-card">
-                            <div class="project-title-number">01 — Anlagenbau / Halbleiter</div>
-                            <h2 class="project-title-main">Komplexe Rohrbaugruppen &amp; Gerätetechnik</h2>
-                            <div class="project-meta-container">
-                                <div class="project-badge"><strong>Rolle:</strong> Konstruktionsingenieur</div>
-                                <div class="project-badge"><strong>Systeme:</strong> PTC Creo Parametric, SAP</div>
+                            <div class="project-card-inner">
+                                <div class="project-card-text">
+                                    <div class="project-title-number">01 — Anlagenbau / Halbleiter</div>
+                                    <h2 class="project-title-main">Komplexe Rohrbaugruppen &amp; Gerätetechnik</h2>
+                                    <div class="project-meta-container">
+                                        <div class="project-badge"><strong>Rolle:</strong> Konstruktionsingenieur</div>
+                                        <div class="project-badge"><strong>Systeme:</strong> PTC Creo Parametric, SAP</div>
+                                    </div>
+                                    <p class="project-description-text">
+                                        Eigenverantwortliche Konstruktion und 3D-CAD-Modellierung von anspruchsvollen Medientableaus, komplexen Rohrbaugruppen und Gerätebaugruppen.
+                                        Integration von hochpräziser Ventiltechnik, Druckminderern und Manometern inklusive normgerechter Zeichnungserstellung (Fertigungs- und Baugruppenzeichnungen).
+                                        Erfolgreiche Abwicklung kundenspezifischer Systemlösungen für einen führenden deutschen Technologie- und Wehrtechnikkonzern.
+                                    </p>
+                                </div>
+                                <div class="project-card-graphic" aria-hidden="true">
+                                    <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematische Liniengrafik einer Rohrbaugruppe mit Ventil und Manometer">
+                                        <line x1="15" y1="95" x2="185" y2="95" stroke="#555" stroke-width="1"/>
+                                        <line x1="15" y1="105" x2="185" y2="105" stroke="#555" stroke-width="1"/>
+                                        <line x1="15" y1="86" x2="15" y2="114" stroke="#6a6a6a" stroke-width="1.2"/>
+                                        <line x1="185" y1="86" x2="185" y2="114" stroke="#6a6a6a" stroke-width="1.2"/>
+                                        <path d="M86 86 L86 114 L100 100 Z" fill="none" stroke="#777" stroke-width="1"/>
+                                        <path d="M114 86 L114 114 L100 100 Z" fill="none" stroke="#777" stroke-width="1"/>
+                                        <line x1="100" y1="100" x2="100" y2="72" stroke="#6a6a6a" stroke-width="1"/>
+                                        <line x1="90" y1="72" x2="110" y2="72" stroke="#6a6a6a" stroke-width="1.2"/>
+                                        <line x1="150" y1="95" x2="150" y2="58" stroke="#555" stroke-width="1"/>
+                                        <circle cx="150" cy="44" r="14" fill="none" stroke="#777" stroke-width="1"/>
+                                        <line x1="150" y1="30" x2="150" y2="34" stroke="#555" stroke-width="0.8"/>
+                                        <line x1="150" y1="54" x2="150" y2="58" stroke="#555" stroke-width="0.8"/>
+                                        <line x1="136" y1="44" x2="140" y2="44" stroke="#555" stroke-width="0.8"/>
+                                        <line x1="160" y1="44" x2="164" y2="44" stroke="#555" stroke-width="0.8"/>
+                                        <line x1="150" y1="44" x2="158" y2="37" stroke="#888" stroke-width="1"/>
+                                        <circle cx="150" cy="44" r="1.6" fill="#888"/>
+                                    </svg>
+                                </div>
                             </div>
-                            <p class="project-description-text">
-                                Eigenverantwortliche Konstruktion und 3D-CAD-Modellierung von anspruchsvollen Medientableaus, komplexen Rohrbaugruppen und Gerätebaugruppen.
-                                Integration von hochpräziser Ventiltechnik, Druckminderern und Manometern inklusive normgerechter Zeichnungserstellung (Fertigungs- und Baugruppenzeichnungen).
-                                Erfolgreiche Abwicklung kundenspezifischer Systemlösungen für einen führenden deutschen Technologie- und Wehrtechnikkonzern.
-                            </p>
                         </div>
 
                         <!-- PROJEKT 2 -->
                         <div class="custom-project-card">
-                            <div class="project-title-number">02 — Allgemeiner Maschinenbau</div>
-                            <h2 class="project-title-main">Bauteiloptimierung &amp; Serienvorbereitung</h2>
-                            <div class="project-meta-container">
-                                <div class="project-badge"><strong>Rolle:</strong> Entwicklungsingenieur</div>
-                                <div class="project-badge"><strong>Systeme:</strong> PTC Creo Parametric, PLM / SAP</div>
+                            <div class="project-card-inner">
+                                <div class="project-card-text">
+                                    <div class="project-title-number">02 — Allgemeiner Maschinenbau</div>
+                                    <h2 class="project-title-main">Bauteiloptimierung &amp; Serienvorbereitung</h2>
+                                    <div class="project-meta-container">
+                                        <div class="project-badge"><strong>Rolle:</strong> Entwicklungsingenieur</div>
+                                        <div class="project-badge"><strong>Systeme:</strong> PTC Creo Parametric, PLM / SAP</div>
+                                    </div>
+                                    <p class="project-description-text">
+                                        Konstruktive Auslegung, Detaillierung und Optimierung von Komponenten im allgemeinen Maschinenbau.
+                                        Durchführung von Machbarkeitsuntersuchungen im Rahmen des Prototypenbaus zur Absicherung der Serienreife.
+                                        Verantwortung für die lückenlose Daten- und Modellpflege im PLM-/SAP-System sowie die Erstellung fertigungsgerechter technischer Dokumentationen.
+                                    </p>
+                                </div>
+                                <div class="project-card-graphic" aria-hidden="true">
+                                    <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Technische Zeichnung eines Stufenbauteils mit Mittellinie und Maßlinie">
+                                        <polyline points="30,57 70,57 70,49 120,49 120,61 160,61 160,89 120,89 120,101 70,101 70,93 30,93 30,57" fill="none" stroke="#777" stroke-width="1"/>
+                                        <line x1="18" y1="75" x2="172" y2="75" stroke="#5a5a5a" stroke-width="0.7" stroke-dasharray="9 3 2 3"/>
+                                        <line x1="30" y1="93" x2="30" y2="124" stroke="#4a4a4a" stroke-width="0.6"/>
+                                        <line x1="160" y1="89" x2="160" y2="124" stroke="#4a4a4a" stroke-width="0.6"/>
+                                        <line x1="30" y1="119" x2="160" y2="119" stroke="#6a6a6a" stroke-width="0.8"/>
+                                        <line x1="26" y1="123" x2="34" y2="115" stroke="#6a6a6a" stroke-width="0.8"/>
+                                        <line x1="156" y1="123" x2="164" y2="115" stroke="#6a6a6a" stroke-width="0.8"/>
+                                        <line x1="120" y1="49" x2="148" y2="35" stroke="#4a4a4a" stroke-width="0.6"/>
+                                        <circle cx="120" cy="49" r="1.4" fill="#777"/>
+                                    </svg>
+                                </div>
                             </div>
-                            <p class="project-description-text">
-                                Konstruktive Auslegung, Detaillierung und Optimierung von Komponenten im allgemeinen Maschinenbau.
-                                Durchführung von Machbarkeitsuntersuchungen im Rahmen des Prototypenbaus zur Absicherung der Serienreife.
-                                Verantwortung für die lückenlose Daten- und Modellpflege im PLM-/SAP-System sowie die Erstellung fertigungsgerechter technischer Dokumentationen.
-                            </p>
                         </div>
 
                         <!-- PROJEKT 3 -->
                         <div class="custom-project-card">
-                            <div class="project-title-number">03 — E-Mobility / Automotive</div>
-                            <h2 class="project-title-main">Prototypenentwicklung &amp; Thermische Validierung</h2>
-                            <div class="project-meta-container">
-                                <div class="project-badge"><strong>Rolle:</strong> Konstruktion &amp; Versuch (Batteriesysteme)</div>
-                                <div class="project-badge"><strong>Systeme:</strong> Siemens NX, CATIA V5, ANSYS</div>
+                            <div class="project-card-inner">
+                                <div class="project-card-text">
+                                    <div class="project-title-number">03 — E-Mobility / Automotive</div>
+                                    <h2 class="project-title-main">Prototypenentwicklung &amp; Thermische Validierung</h2>
+                                    <div class="project-meta-container">
+                                        <div class="project-badge"><strong>Rolle:</strong> Konstruktion &amp; Versuch (Batteriesysteme)</div>
+                                        <div class="project-badge"><strong>Systeme:</strong> Siemens NX, CATIA V5, ANSYS</div>
+                                    </div>
+                                    <p class="project-description-text">
+                                        Eigenständiger Entwurf, 3D-Konstruktion und physischer Aufbau mehrerer Batteriemodulprototypen für Laborversuche im Großkonzern-Umfeld (Daimler AG).
+                                        Erstellung und Umsetzung strukturierter Validierungs- und Erprobungspläne sowie Durchführung numerischer und thermischer Untersuchungen an den Versuchsmodellen.
+                                    </p>
+                                </div>
+                                <div class="project-card-graphic" aria-hidden="true">
+                                    <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schematische Liniengrafik eines Batteriemoduls mit Zellen und Kühlkanälen">
+                                        <rect x="14" y="28" width="172" height="100" rx="6" fill="none" stroke="#666" stroke-width="1"/>
+                                        <rect x="26" y="42" width="20" height="72" rx="3" fill="none" stroke="#777" stroke-width="0.9"/>
+                                        <rect x="52" y="42" width="20" height="72" rx="3" fill="none" stroke="#777" stroke-width="0.9"/>
+                                        <rect x="78" y="42" width="20" height="72" rx="3" fill="none" stroke="#777" stroke-width="0.9"/>
+                                        <rect x="104" y="42" width="20" height="72" rx="3" fill="none" stroke="#777" stroke-width="0.9"/>
+                                        <rect x="130" y="42" width="20" height="72" rx="3" fill="none" stroke="#777" stroke-width="0.9"/>
+                                        <line x1="160" y1="42" x2="160" y2="114" stroke="#4f4f4f" stroke-width="0.7" stroke-dasharray="4 3"/>
+                                        <line x1="168" y1="42" x2="168" y2="114" stroke="#4f4f4f" stroke-width="0.7" stroke-dasharray="4 3"/>
+                                        <line x1="176" y1="42" x2="176" y2="114" stroke="#4f4f4f" stroke-width="0.7" stroke-dasharray="4 3"/>
+                                        <path d="M30 28 L30 18 L52 18 L52 28" fill="none" stroke="#888" stroke-width="1"/>
+                                        <path d="M124 28 L124 18 L146 18 L146 28" fill="none" stroke="#888" stroke-width="1"/>
+                                        <line x1="41" y1="18" x2="41" y2="12" stroke="#888" stroke-width="1"/>
+                                        <line x1="135" y1="18" x2="135" y2="12" stroke="#888" stroke-width="1"/>
+                                    </svg>
+                                </div>
                             </div>
-                            <p class="project-description-text">
-                                Eigenständiger Entwurf, 3D-Konstruktion und physischer Aufbau mehrerer Batteriemodulprototypen für Laborversuche im Großkonzern-Umfeld (Daimler AG).
-                                Erstellung und Umsetzung strukturierter Validierungs- und Erprobungspläne sowie Durchführung numerischer und thermischer Untersuchungen an den Versuchsmodellen.
-                            </p>
                         </div>
 
                     </div>
@@ -239,7 +291,7 @@
             <section class="section-footer">
                 <div class="container">
                     <div class="footer-content-wrapper">
-                        <div class="footer-copyright-text">© 2026 Milic Engineering. Alle Rechte vorbehalten.<br><a href="/legal-notice" class="link">Impressum</a> &nbsp;|&nbsp; <a href="/privacy-policy" class="link-2">Datenschutz</a></div>
+                        <div class="footer-copyright-text">© 2026 Milic Engineering. Alle Rechte vorbehalten.<br><a href="/legal-notice.html" class="link">Impressum</a> &nbsp;|&nbsp; <a href="/privacy-policy.html" class="link-2">Datenschutz</a></div>
                     </div>
                 </div>
             </section>
