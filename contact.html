@@ -104,6 +104,27 @@
         font-size: 14px;
     }
 
+    /* Dropdown-Pfeil: eigener SVG-Pfeil, exakt positionierbar */
+    .select-field {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%23ffffff' stroke-opacity='0.5' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+        background-repeat: no-repeat;
+        background-position: right 18px center; /* Abstand vom rechten Rand – kleiner = weiter rechts, groesser = weiter links */
+        background-size: 12px;
+        padding-right: 44px;
+    }
+
+    /* Platzhalter-Option dezent grau, solange nichts gewaehlt wurde */
+    .select-field:invalid {
+        color: rgba(255,255,255,0.4);
+    }
+    .select-field option {
+        color: #ffffff;
+        background-color: #141414;
+    }
+
     /* Absenden-Button */
     .primary-button {
         font-size: 13px;
@@ -189,7 +210,10 @@
                             
                             <!-- NACHRICHTEN-SENDEN FORMULAR -->
                             <form id="ajax-form" action="https://formspree.io/f/xlgkkpaw" method="POST" class="contact-form">
-                                
+
+                                <!-- Honeypot: für Menschen unsichtbar, Bots füllen es aus und werden verworfen -->
+                                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;" />
+
                                 <label for="name" class="sr-only">Ihr Name</label>
                                 <input class="text-field w-input" maxlength="256" name="Name" placeholder="Ihr Name" type="text" id="name" autocomplete="name" required="" />
                                     
