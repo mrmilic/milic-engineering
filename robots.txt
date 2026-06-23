@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://milic-engineering.de/sitemap.xml
+Sitemap: https://www.milic-engineering.de/sitemap.xml
